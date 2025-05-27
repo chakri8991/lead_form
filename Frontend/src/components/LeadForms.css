@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+.mainDiv{
+    background-image: linear-gradient(to right, #003366,#004080,#0059b3);
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    color: white;
+    font-family: italic;
+    background-color: #1b51a7;
+
+
+}
+.form-bg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1b51a7;
+    box-shadow:4px 8px 10px rgb(51, 47, 47);
+    padding: 30px;  
+    border-radius: 20px;
+
+}
+
+.formDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+input{
+    padding: 10px;
+    border-radius: 10px;
+    border-width: 0px;
+
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border-color: none;
+    border-width: 0px;
+}
+
+button:hover{
+    border-color:#D4E8F0;
+    border-width: 1px;
+}
+
+textarea{
+    padding: 5px;
+    border-radius: 10px;
+    border-width: 0px;
+}
