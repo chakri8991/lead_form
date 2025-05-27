@@ -9,6 +9,7 @@ Components
 - MySQL Database: Stores submitted leads.
 Setup Instructions
 ------------------
+
 Prerequisites:
 - Node.js & npm
 - MySQL
@@ -18,12 +19,17 @@ Prerequisites:
  npm install
  npm start
  Runs on http://localhost:3000
-2. Backend Setup (Express)
+
+
+
+3. Backend Setup (Express)
  cd backend
  npm install
  node server.js
  Runs on http://localhost:5000
-3. MySQL Setup
+
+
+5. MySQL Setup
  Start MySQL.
  Create a database and table:
  CREATE DATABASE leads_db;
@@ -36,7 +42,9 @@ Prerequisites:
  message TEXT,
  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
  );
-4. n8n Workflow Setup
+
+ 
+6. n8n Workflow Setup
  Create a Webhook node (POST):
  URL: http://localhost:5678/webhook-test/webhook
  Add a Code node to parse the incoming string body:
@@ -46,6 +54,7 @@ Prerequisites:
  Add a MySQL node to insert data:
  INSERT INTO leads (name, email, company, message)
  VALUES ({{$json.name}}, {{$json.email}}, {{$json.company}}, {{$json.message}});
+
 Data Flow
 ---------
 1. User submits form on frontend.
@@ -59,6 +68,7 @@ Future Extensions
 - Add email notifications for new leads.
 - Create admin dashboard to view leads.
 - Add spam filtering & CAPTCHA.
+
 Troubleshooting
 ---------------
 - Ensure MySQL server is running and credentials are correct.
