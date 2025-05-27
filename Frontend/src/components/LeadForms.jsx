@@ -21,7 +21,7 @@ const LeadForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const url = "https://lead-form-backend-3zqu.onrender.com";
+        const url = "https://lead-form-backend-3zqu.onrender.com/";
         const options = {
             method: "POST",
             headers: {
